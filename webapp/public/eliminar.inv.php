@@ -1,9 +1,14 @@
-<?php
+<?php session_start();
 require __DIR__ . '/../vendor/autoload.php';
 use Utel\Util\Config;
 use Utel\Util\Inventario;
 use Utel\Util\DataSource;
 
+
+
+if(!isset($_SESSION['authuser'])) {
+    header('Location: login.php');
+}
 
 if(($_SERVER['REQUEST_METHOD'] == 'GET') and isset($_GET['id'])){
     $dbcon = DataSource::getConnection();

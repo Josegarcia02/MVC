@@ -17,7 +17,7 @@
         <a class="nav-link " href="mantenimiento.php">Mantenimiento</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#">Cerrar sesion</a>
+        <a class="nav-link " href="logout.php">Cerrar sesion</a>
       </li>
     </ul>
     <nav class="navbar navbar-light bg-light">

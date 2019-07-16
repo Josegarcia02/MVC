@@ -5,7 +5,9 @@ use Utel\Util\Config;
 use Utel\Util\DataSource;
 use Utel\Util\Inventario;
 
-
+if(!isset($_SESSION['authuser'])) {
+    header('Location: login.php');
+}
 
 
 $dbcon = DataSource::getConnection();

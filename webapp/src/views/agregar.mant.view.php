@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Agregar|mantenimiento </title>
     <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" href="img/dorada.ico">
   </head>
   <body>
   
@@ -12,7 +13,7 @@
         <div class="card-header">
           <div class="row">
             <div class="col text-left">
-              <h3>Registro de inventario</h3>
+              <h3>Registro de mantenimiento</h3>
             </div>
             <div class="col text-right">
               <button type="submit" class="btn btn-success">Guardar</button>

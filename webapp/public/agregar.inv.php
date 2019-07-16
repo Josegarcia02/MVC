@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 require __DIR__ . '/../vendor/autoload.php';
 
 use Utel\Util\Config;
@@ -6,6 +6,9 @@ use Utel\Util\DataSource;
 use Utel\Util\Inventario;
 
 
+if(!isset($_SESSION['authuser'])) {
+    header('Location: login.php');
+}
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     extract($_POST);

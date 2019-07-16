@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Registro de nuevo vehiculo</title>
     <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" href="img/dorada.ico">
   </head>
   <body class="bg-dark">
     <div class="card w-75 mx-auto">

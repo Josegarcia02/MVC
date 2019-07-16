@@ -1,11 +1,13 @@
-<?php
+<?php session_start();
 require __DIR__ . '/../vendor/autoload.php';
 
 use Utel\Util\Config;
 use Utel\Util\DataSource;
 use Utel\Util\Mantenimiento;
 
-
+if(!isset($_SESSION['authuser'])) {
+    header('Location: login.php');
+}
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     extract($_POST);
@@ -18,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mantenimiento = filter_var($mantenimiento, FILTER_SANITIZE_STRING);
     $observaciones = filter_var($observaciones, FILTER_SANITIZE_STRING);
     $errores = "";
-    if(Config::camposVacios($id_vehiculo, $marca, $placa, $serie, $num_inventario, $fecha, $mantenimiento, $accesorios, $observaciones)) {
+    if(Config::camposVacios($id_vehiculo, $marca, $placa, $serie, $num_inventario, $fecha, $mantenimiento,  $observaciones)) {
         $errores .= '<li class="list-group-item text-danger">Por favor rellena todos los datos correctamente</li>';
     }else{
         $dbcon = DataSource::getConnection();

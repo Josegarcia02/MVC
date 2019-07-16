@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Inicio</title>
+    <link rel="icon" href="img/dorada.ico">
 </head>
 <body>
 <?php require ('nav.view.php') ?>
@@ -13,9 +14,13 @@
        <div class="card-header">
           <div class="row">
             <div class="col text-left">
-              <h3 id="headerh3">Padron vahícular</h3>
+              <h3 id="headerh3">Padron vehícular</h3>
             </div> 
+            
+            
+          
               <div class="col text-right">
+              <a href="pdf.php" class="btn btn-info">Imprimir</a>
               <a href="agregar.php" class="btn btn-danger">Agregar</a>
               </div>
             </div>
@@ -36,6 +41,7 @@
                        <th>Asignaciòn</th>  
                        <th>Resguardante</th>
                        <th>Observaciones</th>
+                       <th>&nbsp;</th>
                        <th>&nbsp;</th>
                        <th>&nbsp;</th>
                        </tr>
@@ -65,7 +71,8 @@
                                     <i class="text-danger fas fa-trash"></i>
                                 </a>
                             </td>
-                            <td>
+                            
+                          
                         </tr>
                     <?php endforeach; ?>
                   

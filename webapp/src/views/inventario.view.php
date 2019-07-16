@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inventario</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/dorada.ico">
 </head>
 <body>
     <?php require('nav.view.php'); ?>

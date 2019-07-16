@@ -7,6 +7,9 @@ use Utel\Util\Mantenimiento;
 
 
 
+if(!isset($_SESSION['authuser'])) {
+    header('Location: login.php');
+}
 
 $dbcon = DataSource::getConnection();
 if(isset($dbcon)) {

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Agregar|inventario </title>
     <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" href="img/dorada.ico">
   </head>
   <body>
   

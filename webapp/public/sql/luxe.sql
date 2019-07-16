@@ -6,10 +6,10 @@ USE luxe;
 CREATE TABLE IF NOT EXISTS `usuarios`(
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `nombre` char(255) NOT NULL,
-`apellido` char(255) NOT NULL,
+`apellidos` char(255) NOT NULL,
 `email` varchar(255) NOT NULL,
 `password` varchar(255) NOT NULL,
-`rol` CHAR(255) NOT NULL 
+`rol` CHAR(255) NOT NULL, 
 CONSTRAINT `pk_usuarios` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -68,8 +68,8 @@ ON DELETE RESTRICT ON UPDATE CASCADE
 
 
 
-INSERT INTO `usuarios`(`email`,`password`) VALUES
-    ('jose@hotmail.com', md5('12345'));
+INSERT INTO `usuarios`(`nombre`,`apellidos`,`email`,`password`,`rol`) VALUES
+    ('Jose del carmen','Garcia','jose@hotmail.com', md5('12345'),'admon');
 
 INSERT INTO `vehiculos` (`num_inventario`, `serie`,`vehiculo`,`marca`, `modelo`,`placa`,`color`,`asignado`,`resguardo`,`observaciones`)VALUES
 ('dj-dl-033','8afer5aa3d6154522','camioneta ranger xl','ford','2013','vm-90-702','blanco oxfor','direcion de sustentabilidad y recursos naturales','alvaro lopez','buenas condiciones');
